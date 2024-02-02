@@ -20,12 +20,12 @@ void Main()
 
 		// The project files to update with the new version.	
 		var libraries = new List<string> {	
-			@"..\..\src\Kontract\Kontract.csproj",	
-			@"..\..\src\Komponent\Komponent.csproj",	
-			@"..\..\src\Kanvas\Kanvas.csproj",	
-			@"..\..\src\Kryptography\Kryptography.csproj",	
-			@"..\..\src\Kompression\Kompression.csproj",	
-			@"..\..\src\Kore\Kore.csproj"	
+			@"..\..\src\lib\Kontract\Kontract.csproj",	
+			@"..\..\src\lib\Komponent\Komponent.csproj",	
+			@"..\..\src\lib\Kanvas\Kanvas.csproj",	
+			@"..\..\src\lib\Kryptography\Kryptography.csproj",	
+			@"..\..\src\lib\Kompression\Kompression.csproj",	
+			@"..\..\src\lib\Kore\Kore.csproj"	
 		};	
 
 		// Set the new version in the project files.	

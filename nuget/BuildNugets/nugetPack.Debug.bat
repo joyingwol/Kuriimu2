@@ -17,23 +17,23 @@ echo.
 echo ### Build Kuriimu2 Libraries ###
 echo.
 
-call %msbuild% ..\..\src\Kanvas\Kanvas.csproj /p:Configuration=Debug /p:WarningLevel=0 > nul
-call %msbuild% ..\..\src\Komponent\Komponent.csproj /p:Configuration=Debug /p:WarningLevel=0 > nul
-call %msbuild% ..\..\src\Kompression\Kompression.csproj /p:Configuration=Debug /p:WarningLevel=0 > nul
-call %msbuild% ..\..\src\Kontract\Kontract.csproj /p:Configuration=Debug /p:WarningLevel=0 > nul
-call %msbuild% ..\..\src\Kore\Kore.csproj /p:Configuration=Debug /p:WarningLevel=0 > nul
-call %msbuild% ..\..\src\Kryptography\Kryptography.csproj /p:Configuration=Debug /p:WarningLevel=0 > nul
+call %msbuild% ..\..\src\lib\Kanvas\Kanvas.csproj /p:Configuration=Debug /p:WarningLevel=0 > nul
+call %msbuild% ..\..\src\lib\Komponent\Komponent.csproj /p:Configuration=Debug /p:WarningLevel=0 > nul
+call %msbuild% ..\..\src\lib\Kompression\Kompression.csproj /p:Configuration=Debug /p:WarningLevel=0 > nul
+call %msbuild% ..\..\src\lib\Kontract\Kontract.csproj /p:Configuration=Debug /p:WarningLevel=0 > nul
+call %msbuild% ..\..\src\lib\Kore\Kore.csproj /p:Configuration=Debug /p:WarningLevel=0 > nul
+call %msbuild% ..\..\src\lib\Kryptography\Kryptography.csproj /p:Configuration=Debug /p:WarningLevel=0 > nul
 
 echo.
 echo ### Copy Nugets ###
 echo.
 
-copy /y ..\..\src\Kanvas\bin\Debug\*.nupkg ..\..\nuget\*
-copy /y ..\..\src\Komponent\bin\Debug\*.nupkg ..\..\nuget\*
-copy /y ..\..\src\Kompression\bin\Debug\*.nupkg ..\..\nuget\*
-copy /y ..\..\src\Kontract\bin\Debug\*.nupkg ..\..\nuget\*
-copy /y ..\..\src\Kore\bin\Debug\*.nupkg ..\..\nuget\*
-copy /y ..\..\src\Kryptography\bin\Debug\*.nupkg ..\..\nuget\*
+copy /y ..\..\src\lib\Kanvas\bin\Debug\*.nupkg ..\..\nuget\*
+copy /y ..\..\src\lib\Komponent\bin\Debug\*.nupkg ..\..\nuget\*
+copy /y ..\..\src\lib\Kompression\bin\Debug\*.nupkg ..\..\nuget\*
+copy /y ..\..\src\lib\Kontract\bin\Debug\*.nupkg ..\..\nuget\*
+copy /y ..\..\src\lib\Kore\bin\Debug\*.nupkg ..\..\nuget\*
+copy /y ..\..\src\lib\Kryptography\bin\Debug\*.nupkg ..\..\nuget\*
 
 echo.
 echo ##################################
