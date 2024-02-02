@@ -9,7 +9,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>plugin_blue_reflection</RootNamespace>
     <AssemblyName>plugin_blue_reflection</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v7.0.4</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
     <TargetFrameworkProfile />
@@ -33,13 +33,13 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Kanvas, Version=2.0.6.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Kuriimu2.Kanvas.2.0.6\lib\net472\Kanvas.dll</HintPath>
+      <HintPath>..\packages\Kuriimu2.Kanvas.2.0.6\lib\net7.0\Kanvas.dll</HintPath>
     </Reference>
     <Reference Include="Komponent, Version=2.0.6.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Kuriimu2.Komponent.2.0.6\lib\net472\Komponent.dll</HintPath>
+      <HintPath>..\packages\Kuriimu2.Komponent.2.0.6\lib\net7.0\Komponent.dll</HintPath>
     </Reference>
     <Reference Include="Kontract, Version=2.0.6.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Kuriimu2.Kontract.2.0.6\lib\net472\Kontract.dll</HintPath>
+      <HintPath>..\packages\Kuriimu2.Kontract.2.0.6\lib\net7.0\Kontract.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.Composition" />

@@ -2,7 +2,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp31</TargetFramework>
+    <TargetFramework>net7.0</TargetFramework>
     <AppendTargetFrameworkToOutputPath>false</AppendTargetFrameworkToOutputPath>
     <LangVersion>8</LangVersion>
   </PropertyGroup>
@@ -14,11 +14,11 @@
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
-    <OutputPath>..\..\..\dist\Debug\netcoreapp31\plugins</OutputPath>
+    <OutputPath>..\..\..\dist\Debug\net7.0\plugins</OutputPath>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
-    <OutputPath>..\..\..\dist\Release\netcoreapp31\plugins</OutputPath>
+    <OutputPath>..\..\..\dist\Release\net7.0\plugins</OutputPath>
   </PropertyGroup>
 
   <ItemGroup>
@@ -26,7 +26,7 @@
     <PackageReference Include="Kontract" Version="2.0.8" />
   </ItemGroup>
 
-  <PropertyGroup Condition="'$(TargetFramework)'=='netcoreapp31'">
+  <PropertyGroup Condition="'$(TargetFramework)'=='net7.0'">
     <DefineConstants>NET_CORE_31</DefineConstants>
   </PropertyGroup>
 
