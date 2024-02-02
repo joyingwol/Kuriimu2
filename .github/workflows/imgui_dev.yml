@@ -45,20 +45,20 @@ jobs:
         echo '{"source_type": "Github Action", "version": "${{ steps.set_version.outputs.prop }}", "build_number": "${{ github.run_id }}", "application_name": "Kuriimu2.exe" }' > ./update/Windows/manifest.json
         echo '{"source_type": "Github Action", "version": "${{ steps.set_version.outputs.prop }}", "build_number": "${{ github.run_id }}", "application_name": "Kuriimu2" }' > ./update/Linux/manifest.json
         echo '{"source_type": "Github Action", "version": "${{ steps.set_version.outputs.prop }}", "build_number": "${{ github.run_id }}", "application_name": "Kuriimu2" }' > ./update/Mac/manifest.json
-        echo '{"source_type": "Github Action", "version": "${{ steps.set_version.outputs.prop }}", "build_number": ${{ github.run_id }} }' > ./src/Kuriimu2.ImGui/Resources/version.json
+        echo '{"source_type": "Github Action", "version": "${{ steps.set_version.outputs.prop }}", "build_number": ${{ github.run_id }} }' > ./src/ui/Kuriimu2.ImGui/Resources/version.json
 
     - name: Pack libraries
       run: |
-        dotnet build ./src/Kontract/Kontract.csproj --configuration Release
-        dotnet build ./src/Komponent/Komponent.csproj --configuration Release
-        dotnet build ./src/Kanvas/Kanvas.csproj --configuration Release
-        dotnet build ./src/Kompression/Kompression.csproj --configuration Release
-        dotnet build ./src/Kryptography/Kryptography.csproj --configuration Release
-        dotnet pack ./src/Kontract/Kontract.csproj --configuration Release --verbosity normal
-        dotnet pack ./src/Komponent/Komponent.csproj --configuration Release --verbosity normal
-        dotnet pack ./src/Kanvas/Kanvas.csproj --configuration Release --verbosity normal
-        dotnet pack ./src/Kompression/Kompression.csproj --configuration Release --verbosity normal
-        dotnet pack ./src/Kryptography/Kryptography.csproj --configuration Release --verbosity normal
+        dotnet build ./src/lib/Kontract/Kontract.csproj --configuration Release
+        dotnet build ./src/lib/Komponent/Komponent.csproj --configuration Release
+        dotnet build ./src/lib/Kanvas/Kanvas.csproj --configuration Release
+        dotnet build ./src/lib/Kompression/Kompression.csproj --configuration Release
+        dotnet build ./src/lib/Kryptography/Kryptography.csproj --configuration Release
+        dotnet pack ./src/lib/Kontract/Kontract.csproj --configuration Release --verbosity normal
+        dotnet pack ./src/lib/Komponent/Komponent.csproj --configuration Release --verbosity normal
+        dotnet pack ./src/lib/Kanvas/Kanvas.csproj --configuration Release --verbosity normal
+        dotnet pack ./src/lib/Kompression/Kompression.csproj --configuration Release --verbosity normal
+        dotnet pack ./src/lib/Kryptography/Kryptography.csproj --configuration Release --verbosity normal
       
     - name: Publish plugins
       run: |
@@ -99,9 +99,9 @@ jobs:
         
     - name: Publish Imgui application with dotnet
       run: |
-        dotnet publish ./src/Kuriimu2.ImGui/Kuriimu2.ImGui.csproj --output ./dist/final/Windows --configuration Release --framework netcoreapp31 --runtime win-x64 /p:PublishSingleFile=true
-        dotnet publish ./src/Kuriimu2.ImGui/Kuriimu2.ImGui.csproj --output ./dist/final/Linux --configuration Release --framework netcoreapp31 --runtime linux-x64 /p:PublishSingleFile=true
-        dotnet publish ./src/Kuriimu2.ImGui/Kuriimu2.ImGui.csproj --output ./dist/final/Mac --configuration Release --framework netcoreapp31 --runtime osx-x64 /p:PublishSingleFile=true
+        dotnet publish ./src/ui/Kuriimu2.ImGui/Kuriimu2.ImGui.csproj --output ./dist/final/Windows --configuration Release --framework netcoreapp31 --runtime win-x64 /p:PublishSingleFile=true
+        dotnet publish ./src/ui/Kuriimu2.ImGui/Kuriimu2.ImGui.csproj --output ./dist/final/Linux --configuration Release --framework netcoreapp31 --runtime linux-x64 /p:PublishSingleFile=true
+        dotnet publish ./src/ui/Kuriimu2.ImGui/Kuriimu2.ImGui.csproj --output ./dist/final/Mac --configuration Release --framework netcoreapp31 --runtime osx-x64 /p:PublishSingleFile=true
         mv ./dist/final/Windows/Kuriimu2.ImGui.exe ./dist/final/Windows/Kuriimu2.exe
         mv ./dist/final/Linux/Kuriimu2.ImGui ./dist/final/Linux/Kuriimu2
         mv ./dist/final/Mac/Kuriimu2.ImGui ./dist/final/Mac/Kuriimu2
